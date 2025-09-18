@@ -1,0 +1,21 @@
+services:
+  library-service:
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: .
+    environment:
+      - NODE_ENV=${NODE_ENV:-production} # Target stage based on the TARGET
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/home/node/app
+    networks:
+      - library-network
+
+networks:
+  library-network:
+    driver: bridge
+    external: true
+    name: library-network
