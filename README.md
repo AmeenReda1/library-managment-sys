@@ -2,6 +2,57 @@
 
 A comprehensive library management system built with NestJS, TypeORM, and PostgreSQL. This system provides a complete solution for managing books, users, and borrowing processes with advanced features like pagination, CSV export, rate limiting, and JWT authentication.
 
+## ✨ Key Features
+
+### 🚀 **Advanced API Features**
+
+- **🛡️ Rate Limiting (Throttling)**: Login API protected with 5 attempts per minute
+- **📊 CSV Export**: Monthly borrowing process reports with automatic file naming
+- **🔍 Smart Filtering**: Get overdue books using query parameters to reduce code redundancy
+- **📄 Pagination**: All list endpoints support advanced pagination with search and filters
+
+### 💾 **CSV Export Functionality**
+
+- **📥 Monthly Reports**: Export borrowing processes from the last month
+- **📁 Auto-Download**: Files automatically download to your Downloads folder
+- **📅 Smart Naming**: CSV files named with month format (e.g., `borrowing-processes-2025-01.csv`)
+- **⚡ Rate Limited**: 1 export per 5 seconds to prevent abuse
+- **📋 Complete Data**: Includes borrower info, book details, dates, and return status
+
+### 🧪 **Quality Assurance**
+
+- **✅ Unit Testing**: Comprehensive unit tests for Books service
+- **🔒 Type Safety**: Full TypeScript implementation with strict typing
+- **🛡️ Data Validation**: Request validation using class-validator
+- **🔐 Security**: JWT authentication with role-based access control
+
+### 📱 **Postman Integration**
+
+- **💾 Save as File**: Save Postman requests as files for easy sharing
+- **📥 Direct Download**: CSV exports download directly to your Downloads folder
+- **🔄 Reusable**: Export same endpoint multiple times with updated data
+
+## 📊 Resources
+
+### 🗄️ **Database Diagram**
+
+View the complete database schema and relationships:
+
+![Database Schema](./assets/db-library.png)
+
+### 📮 **Postman Collection**
+
+Ready-to-use API collection with all endpoints configured:
+
+🚀 **[Postman Collection](https://drive.google.com/file/d/1o5ploG093wgNu-zP4Uo8X3ogBahrupOg/view?usp=sharing)**
+
+**How to use the Postman Collection:**
+
+1. Download the collection from the link above
+2. Import it into Postman
+3. Set up your environment variables (`Library_url`, `token`)
+4. Start testing the APIs immediately!
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -601,19 +652,3 @@ Relations:
 4. **Docker Issues**
    - Run `docker compose down -v` to reset containers and volumes
    - Ensure Docker is running and has sufficient resources
-
-## 📝 License
-
-This project is licensed under the UNLICENSED License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
----
-
-For more information or support, please contact the development team.
